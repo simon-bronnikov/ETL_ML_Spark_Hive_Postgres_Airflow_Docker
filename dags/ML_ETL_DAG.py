@@ -27,7 +27,7 @@ with DAG(
 
     air_data_analysis = SparkSubmitOperator(
         task_id='data_analysis',
-        application='./.venv/ML_ETL_project/dags/ML_ETL_spending_prediction/csv-postgres.py', 
+        application='./dags/ML_ETL_spending_prediction/csv-postgres.py', 
         verbose=True,
         conn_id='spark_default',
         conf={"spark.master": "spark://spark-master:7077"}, 
@@ -35,7 +35,7 @@ with DAG(
 
     air_train_model = SparkSubmitOperator(
         task_id='train_model',
-        application='./.venv/ML_ETL_project/dags/ML_ETL_spending_prediction/model_train.py', 
+        application='./dags/ML_ETL_spending_prediction/model_train.py', 
         verbose=True,
         conn_id='spark_default',
         conf={"spark.master": "spark://spark-master:7077"}, 
@@ -43,7 +43,7 @@ with DAG(
 
     air_pred_model = SparkSubmitOperator(
         task_id='pred_model',
-        application='./.venv/ML_ETL_project/dags/ML_ETL_spending_prediction/predict_model.py', 
+        application='./dags/ML_ETL_spending_prediction/predict_model.py', 
         verbose=True,
         conn_id='spark_default',
         conf={"spark.master": "spark://spark-master:7077"}, 
