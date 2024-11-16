@@ -25,7 +25,7 @@ class Ecommerce_customers:
         StructField('length_of_membership', FloatType()),
         StructField('yearly_amount_spent', FloatType())
     ])
-    path = '.venv/ML_ETL_project/dags/ecommerce_customers.csv'
+    path = './dags/data/ecommerce_customers.csv'
     name = 'ecommerce_customers'
 
 ecommerce_customers = spark.read\
