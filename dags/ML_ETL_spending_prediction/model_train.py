@@ -63,6 +63,6 @@ spark.sql("""
 test_data.write.mode("overwrite").insertInto("test_data")
 
 #Сохранение модели
-model_path = '/Users/workspace/Desktop/DE/.venv/model'
+model_path = './model'
 
 lr_model.write().overwrite().save(model_path)
