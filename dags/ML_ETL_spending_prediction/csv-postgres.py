@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 
 spark = SparkSession.builder\
-    .config("spark.jars", "/Users/workspace/Desktop/DE/.venv/bin/postgresql-42.7.4 20.13.35.jar")\
+    .config("spark.jars", "./postgresql-42.7.4 20.13.35.jar")\
     .appName("csv-postgres")\
     .master("local[*]")\
     .enableHiveSupport()\
