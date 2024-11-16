@@ -5,7 +5,7 @@ from pyspark.ml.regression import LinearRegression
 from pyspark.ml.feature import VectorAssembler
 
 spark = SparkSession.builder\
-    .config("spark.jars", "/Users/workspace/Desktop/DE/.venv/bin/postgresql-42.7.4 20.13.35.jar")\
+    .config("spark.jars", "./postgresql-42.7.4 20.13.35.jar")\
     .config("hive.metastore.uris", "thrift://hive-metastore:9083") \
     .enableHiveSupport() \
     .appName("csv-postgres")\
