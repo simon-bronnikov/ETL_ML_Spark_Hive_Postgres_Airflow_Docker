@@ -3,14 +3,14 @@ from pyspark.sql.types import *
 from pyspark.ml import PipelineModel
 
 spark = SparkSession.builder\
-    .config("spark.jars", "/Users/workspace/Desktop/DE/.venv/bin/postgresql-42.7.4 20.13.35.jar")\
+    .config("spark.jars", "./postgresql-42.7.4 20.13.35.jar")\
     .config("hive.metastore.uris", "thrift://hive-metastore:9083") \
     .enableHiveSupport() \
     .appName("csv-postgres")\
     .master("local[*]")\
     .getOrCreate()
 
-model_path = '/Users/workspace/Desktop/DE/.venv/model'
+model_path = './model'
 
 model = PipelineModel.load(model_path)
 
